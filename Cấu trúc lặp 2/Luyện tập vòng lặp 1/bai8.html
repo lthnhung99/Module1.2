@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+
+<body>
+    <button onclick="play()">Chơi</button>
+
+    <script>
+        function play() {
+            let num = +prompt('Nhập vào khoảng muốn đoán');
+            let guess = +prompt('Nhập số dự đoán');
+            let rdnum = Math.floor(Math.random() * num);
+            console.log(rdnum);
+            let count = 0;
+            while (guess != rdnum) {
+                count++;
+                if (count == 4) {
+                    alert('Bạn đã hết số lần đoán');
+                    break;
+                }
+                if (guess > rdnum) {
+                    alert('Số bạn đoán lớn hơn');
+                }
+                else {
+                    alert('Số bạn đoán bé hơn');
+                }
+                guess = +prompt('Nhập số dự đoán')
+            }
+            if (count == 4) {
+                document.write('Bạn hết số lần đoán');
+            } else {
+                document.write('Bạn đã đoán đúng. Chúc mừng');
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <table>
+        <h1>
+            <h1>Tính lãi ngân hàng</h1>
+        </h1>
+        <tbody>
+            <tr>
+                <td>Số tiền ban đầu</td>
+                <td>
+                    <input id="begin" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Số tháng cho vay</td>
+                <td>
+                    <input id="month" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Lãi suất hàng tháng</td>
+                <td>
+                    <input id="money" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ketqua()" >Tính toán</button>
+                    
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <p id="result"></p>
+   <script>
+    function ketqua() {
+        let begin = parseInt(document.getElementById("begin").value);
+            let month = parseInt(document.getElementById("month").value);
+            let money = parseFloat(document.getElementById("money").value);
+           let sum;
+           for (i = 1; i<=month;i++) {
+            sum=money*begin;
+            begin=begin+sum;
+           } 
+           document.getElementById("result").innerHTML = "Tổng lãi thu được: " + sum + "đồng";
+    } 
+   </script>
+        
+</body>
+
+</html>
