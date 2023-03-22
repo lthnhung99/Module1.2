@@ -10,17 +10,32 @@
 
 <body>
     <h1>Bảng cửu chương</h1>
+    <table border="1" id="tb">
+
+    </table>
     <script>
-        let bang = "<table border='1'>";
-        for (let i = 1; i <= 9; i++) {
-            bang = bang + "<tr>";
-            for (let j = 2; j <= 9; j++) {
-                bang = bang + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        // let bang = "<table border='1'>";
+        // for (let i = 1; i <= 9; i++) {
+        //     bang = bang + "<tr>";
+        //     for (let j = 2; j <= 9; j++) {
+        //         bang = bang + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        //     }
+        //     bang = bang + "</tr>";
+        // }
+        // bang = bang + "</table>";
+        // document.write(bang);
+       let str = "";
+       for (let i = 1; i <=9; i++) {
+        str+="<tr>";
+            for (let j = 2; j <=9;j++) 
+            {
+                str+="<td>";
+                    str+= `${i}x${j}= ${i*j}`;
+                    str+="</td>"
             }
-            bang = bang + "</tr>";
+            str+="<tr>";
         }
-        bang = bang + "</table>";
-        document.write(bang);
+        document.querySelector("#tb").innerHTML = str;
     </script>
 </body>
 

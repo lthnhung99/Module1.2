@@ -13,13 +13,13 @@
         let a = 0;
         let b = 1;
         for (let i = 0; i <= 1000; i++) {
-            let c = a + b;
-            if (c % 5 == 0) {
-                document.write('Số chia hết cho 5 đầu tiên trong dãy fibonaci là:' +c);
+            let sum = a + b;
+            if (sum % 5 == 0) {
+                document.write('Số chia hết cho 5 đầu tiên trong dãy fibonaci là:' +sum);
                 break;
             }
             a = b;
-            b = c;
+            b = sum;
         }
     </script>
 </body>
