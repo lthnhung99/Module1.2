@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        let arr = new Array(10);
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = (Math.random() * (-20) + Math.random() * 30).toFixed(2);
+        }
+        // Math.random() trả về một số ngẫu nhiên trong khoảng từ 0 đến 1.
+        // Math.random() * (-20) sẽ tạo ra một số ngẫu nhiên trong khoảng từ 0 đến -20.
+        // Math.random() * 30 sẽ tạo ra một số ngẫu nhiên trong khoảng từ 0 đến 30.
+        //Kết hợp hai số trên, ta có (Math.random() * (-20) + Math.random() * 30) sẽ tạo ra một số ngẫu nhiên trong khoảng từ -20 đến 10.
+        console.log(arr);
+        function sumGreater(array){
+            let sum = 0;
+            for(i=1;i<array.length;i++){
+                if(Number(array[i])>Number(array[i-1])){
+                    sum += Number(array[i]);
+                }
+            }
+            return sum;
+        }
+        console.log(sumGreater(arr));
+    </script>
+    
+</body>
+</html>

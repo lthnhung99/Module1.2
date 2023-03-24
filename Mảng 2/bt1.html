@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <script>
+        // Bài 1
+        // let myColor = ["Red", "Green", "While", "Black"];
+        // document.write(myColor.join());
+        
+       // Bài 2
+        let Num=prompt('Nhập vào một số liền kề');
+        let newNum = [];
+        for (i = 0; i < Num.length; i++){
+            if ((Num[i+1]%2 == 0) && (Num[i]%2==0)){
+                newNum.push(Num[i],"-");
+            }else {
+                newNum.push(Num[i]);
+            }
+        }
+        var str = newNum.join('');
+        document.write(str);
+
+        //Bài 3
+        // let str = "ThE QuIck BrOwn Fox";
+        // let newStr = [];
+        // console.log(str[0].toLowerCase());
+        // for (i = 0; i < str.length; i++) {
+        //     if (str[i] == str[i].toLowerCase()) {
+        //         newStr.push(str[i].toUpperCase());
+        //     } else {
+        //         newStr.push(str[i].toLowerCase());
+        //     }
+        // }
+        // document.write(newStr.join(''))
+
+       
+       
+    </script>
+</body>
+</html> 

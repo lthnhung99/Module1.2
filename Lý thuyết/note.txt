@@ -1,0 +1,33 @@
+toUpperCase(): chuyển 1 chuỗi thành chuỗi hoa
+let str = "Quang";
+str.toUpperCase()       // "QUANG"
+
+toLowerCase(): chuyển 1 chuỗi thành chuỗi thường
+
+
+let index = -1;     // mặc định -1 là ko tìm thấy
+for(let i=0;i<englishes.length;i++){
+    if(englishes[i].toUpperCase()== txtSearch.toUpperCase()){
+        index = i;
+        break;
+    }
+}
+
+// Có thể dùng querySelector để tìm tới 1 thẻ
+// let txtSearch = document.querySelector("#txtSearch").value;
+let txtSearch = document.getElementById("txtSearch").value;
+
+let floats = new Array(10);
+let min = 10;
+let max = 80;
+for(let i =0; i < floats.length; i ++){
+    floats[i] = (Math.random()*(max - min + 1) + min).toFixed(2);
+    // floats[i] = Math.floor(Math.random()*(max - min + 1) + min);
+}
+
+console.log(floats);
+
+// size
+// [min, max]
+// Math.floor(Math.random()*(max - min + 1) + min) ==> mảng số nguyên
+// (Math.random()*(max - min + 1) + min).toFixed(n) ==> mảng số thực có n phần lẻ

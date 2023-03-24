@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+        //-------------Làm gì đây ??? Khai báo mảng rỗng
+        let a1 = [];
+        let a2 = new Array();
+        // ------------ a3,a4: gán giá trị cho mảng
+        let a3 = [3,5,6,8];
+        let a4 = new Array(3,5,6,8);
+        // Mảng trong java có chưa được nhiều kiểu dữ liệu không?? có
+        let x = [1.3, "Quang Dang"];
+        console.log(x[0]);
+        //----------x.length, x.length là gì?????
+        let x = [1, 3, 5, 7];
+        console.log(x.length); // độ dài của mảng
+        console.log(x.length-1);// độ dài cuối của mảng
+        //---------- a3[7] ra cái gì???
+        let a3 = [3,5,6,8];
+        console.log(a3[2]);         // 6
+        console.log(a3[7]);         // underfined
+        // -----------Đoạn này làm gì đây?? in ra từng giá trị của mảng (duyệt các giá trị của mảng)
+        let a = [3,5,6,8];
+        console.log(a[0]);
+        console.log(a[1]);
+        console.log(a[2]);
+        console.log(a[3]);
+        for(let i=0;i<a.length;i++){
+            console.log(`a[${i}] = ${a[i]}`); 
+        }
+        // Bài 1: Ra cái gì     sum =22
+        let a = [3,5,6,8];
+        let sum = 0;
+        for(let i=0;i<a.length;i++){
+            sum+= a[i];
+        }
+        // Bài 1*: Tính tổng 3 giá trị cuối cùng của màng:
+        let a = [3, 5, 6, 8, 8, 1];
+        let sum = 0;
+        for (let i = 1; i <= 3; i++) {
+            sum+= a[a.length-i];
+        }
+        console.log(sum); //17
+        // Ra cái gì: ??? //8
+        let a = [3, 3, 6, 8, 1];
+        let max = a[0];
+        for(let i=0;i<a.length;i++){
+            if(a[i]>max){
+                max = a[i];
+            }
+        }
+        console.log(max);
+        // Ra cái gì????  giá trị lớn nhất là 8. vị trí 2
+        let a = [3, 6, 8, 1];
+        let max = a[0];
+        let index = 0;
+        for(let i=0;i<a.length;i++){
+            if(a[i]>max){
+                max = a[i];
+                index = i;
+            }
+        }
+        console.log(`Giá trị lớn nhất: ${max} vị trí: ${index}`);
+        // Ra cái gì????                
+       
+        
+        i<2(i<5/2=2)                   
+        i=0 [3,6,8,1,3] temp =2 [3,6,8,1,2] 
+        i=1 [3,1,8,1,2] temp=6 [3,1,8,6,2]
+        i=2 [3,1,8,6,2] 
+        i=3 x
+        **/
+
+       
+         // -----------Đoạn này làm gì đây
+         // mảng 2 chiều
+         let arr = [
+            [2,1,7,5],
+            [1,1,3,3],
+            [2,2,1,8],
+            [2,5,1,6]
+        ];
+        let str = "";//khởi tạo chuỗi rỗng
+        //sử dụng vòng lặp for để duyệt qua từng hàng trong mảng
+        for(let i=0;i<arr.length;i++){
+            //sd vòng lặp for để duyệt qua các phần tử trong hàm đó
+            for(let j=0;j<arr[i].length;j++){
+                //trong mỗi vòng lặp for của từng phần tử, thêm giá trị đó vào biến chuỗi str.
+                str += arr[i][j];
+            }
+            str += "\n";
+        }
+        console.log(str); // 2175
+                        // 1135
+                        //2218
+                        //2516
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+       <h1>Temperature Converter</h1>
+       <p><b>Type a value in the Fahrenheit field to convert the value to Celsius</b></p>
+        <tr>
+            <td><b>Fahrenheit</b></td>
+            <td>
+                <input onchange="Covert(this.value)" id="F" type="number">
+            </td>
+        </tr>
+       <p id="output"><b>Celcius:</b></p>
+        
+</body>
+</html>
+<script>
+    function Covert(Far) {
+        let Cel = (Far -32)/1.8;
+        document.getElementById('output').innerText = `Celcius: ${Cel}`
+    }
+</script>
