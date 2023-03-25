@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        let r = +prompt('Nhập vào bán kính hình tròn');
+        function calculate(r) {
+            let pi = 3.14;
+            let C= 2*pi*r;
+            let S = r*r*pi;
+            document.write(`Chu vi hình tròn là: ${C}  <br>`);
+            document.write(`Diện tích hình tròn là: ${S}`);
+        }
+        calculate (r);
+    </script>
+</body>
+</html>

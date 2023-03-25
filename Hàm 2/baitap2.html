@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuyển đổi giữa feet và meters</title>
 </head>
+
 <body>
     <h1>Chuyển đổi giữa Feet và Meters</h1>
     <tr>
@@ -16,16 +18,30 @@
     </tr>
     <br>
     <br>
-     <button onclick="changemeters()" id="meters">Feet to meters</button>
-     <button onclick="changefeet()" id="feet">Meters to feet</button>
-    
+    <button onclick="changemeters()" id="meters">Feet to meters</button>
+    <button onclick="changefeet()" id="feet">Meters to feet</button>
+
 </body>
+
 </html>
 <script>
     let a = document.getElementById('number');
     function changemeters() {
-        let num = a. value;
-        
+        let num = a.value;
+        function cal1(feet) {
+            return feet*0.305;
+        }
+        document.getElementById('meters').innerText =`${num} Feet = ${cal1(num)} Meter` ;
     }
+   
+    function changefeet() {
+        let num = a.value;
+        function cal2(meters) {
+           return meters * 3.279;
+        }
+        document.getElementById('feet').innerText =`${num} Meters = ${cal2(num)} Feet` ;
+    }
+    
+  
 
 </script>

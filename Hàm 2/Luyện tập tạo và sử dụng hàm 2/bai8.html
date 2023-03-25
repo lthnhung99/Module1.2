@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(10);
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = Math.ceil(Math.random() * 100);
+        }
+        document.write(`Mảng đầu: [${arr}] <br>`);
+        function reverse(a) {
+            for (var i = 0; i < a.length / 2; i++) {
+                let temp = a[i];
+                a[i] = a[a.length - i - 1];
+                a[a.length - i - 1] = temp;
+            }
+            document.write(`Mảng đảo ngược: [${a}]`);
+        }
+        reverse(arr);
+    </script>
+
+</body>
+
+</html>
