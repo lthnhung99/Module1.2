@@ -8,7 +8,14 @@
 </head>
 <body>
     <script>
-        
+        function isNumeric(character) {                  // isNaN trả về true nếu không phải số
+      return !isNaN(character);                      // isNaN trả về false nếu là số
+    }                                           // Sử dụng phép phủ định '!' để đảo ngược kết quả trả về
+    var char = prompt('Nhập 1 ký tự');           // không check được chuỗi rỗng isNaN(' '), isNaN(null), isNaN(undefined)         
+    var check = isNumeric(char);                 
+    if (check == true) document.write(`${char} là số`);
+    else document.write(`${char} không phải là số`);
+
 
     </script>
 </body>
