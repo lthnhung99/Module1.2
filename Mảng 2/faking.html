@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <h1>Type anything Slowly</h1>
+    <textarea id="area" cols="50" rows="10" onkeydown="enterValue()"></textarea>
+    <script>
+        let count = 0;
+        var characters = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'H', 'u', 'e']
+        let str = "";
+        function enterValue() {
+            setTimeout(function () {
+                if (count == characters.length) {
+                    count = 0;
+                    str = "";
+                    document.getElementById('area').value = "";
+                }
+                else {
+                    str += characters[count];
+                    document.getElementById('area').value = str;
+                    count++;
+                }
+            }, 1)
+        }
+
+    </script>
+</body>
+
+</html>
