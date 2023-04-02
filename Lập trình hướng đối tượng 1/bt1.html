@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1200px" height="400px"></canvas>
+<script>
+  
+
+    class Rectangle{
+        constructor(width,height){
+            this.width=width;
+            this.height=height;
+        }
+        getArea() {
+            return this.width * this.height;
+        }
+        getPerimeter(){
+            return (this.width + this.height)*2;
+        }
+    }
+    let r = new Rectangle(10,20);
+    let rect = document.getElementById("myCanvas").getContext("2d");
+    rect.strokeRect(200,50,200,50);
+    document.write("Diện tích: "+ r.getArea() + "<br>");
+    document.write("Chu vi: "+ r.getPerimeter());
+
+
+
+   </script>
+</body>
+</html>
