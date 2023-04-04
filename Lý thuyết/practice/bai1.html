@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1>Bài 1: Tính tổng các giá trị dương trong mảng 1 chiều các số thực</h1>
     <script>
         let arr = new Array(10);
         for (i = 0; i < arr.length; i++) {
@@ -16,13 +17,13 @@
         }
         console.log(arr);
         function sumPositive(array) {
-            let sumNega = 0;
+            let sumPos = 0;
             for (var i = 0; i < array.length; i++) {
                 if (array[i] >= 0) {
-                    sumNega += Number(array[i]);
+                    sumPos += Number(array[i]);
                 }
             }
-            return sumNega;
+            return sumPos;
         }
         console.log(`Tổng các số dương trong mảng là ${sumPositive(arr)}`);
     </script>

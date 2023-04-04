@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15</title>
+</head>
+<body>
+    <h1>Bài 15: Kiểm tra một cột ma trận có giảm dần hay không</h1>
+    <script>
+        let a = [
+            [5,2,3,1,4],
+            [6,5,4,3,2],
+            [9,8,2,13,14]
+        ];
+        console.log(a);
+        function checkPostive(arr,column) {
+            for (let i=0;i<arr.legth-1;i++) {
+                if (arr[i][column] <=arr[i+1][column]) {
+                return false;
+            }
+            }
+            return true;
+        }
+        
+        console.log(checkPostive(a,4));
+    </script>
+</body>
+</html> 
